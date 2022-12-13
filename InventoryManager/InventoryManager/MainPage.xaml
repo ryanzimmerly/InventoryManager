@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventoryManager.MainPage">
+
+    <StackLayout>
+        <Label Text="Inventory Manager" FontSize="Title" FontAttributes="Bold, italic" Padding="30,10,30,10"/>
+        <Label Text="Login" FontSize="16" Padding="30,0,30,0"/>
+        <Entry Placeholder="Enter Email" 
+               Text=""
+               x:Name="EmailInput"/>
+        <Entry Placeholder="Enter Password" 
+               Text=""
+               x:Name="PasswordInput"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Login" 
+                    Clicked="ButtonLoginClicked"/>
+            <Button Grid.Column="1"
+                    Text="Create Account"
+                    Clicked="ButtonCreateClicked"/>
+        </Grid>
+        <Label Text="" 
+               x:Name="lblOutput"/>
+    </StackLayout>
+</ContentPage>

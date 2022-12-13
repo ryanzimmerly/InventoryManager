@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventoryManager.InventoryManager">
+
+    <StackLayout>
+        <Label Text="Inventory Manager" FontSize="Title" FontAttributes="Bold,Italic"/>
+        <Label Text="Please provide the following information:"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Item ID" FontSize="Large"
+                   Grid.Row="0"/>
+            <Entry Placeholder="Enter Item ID" 
+               x:Name="txtItemID"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Item Name" FontSize="Large"
+                   Grid.Row="1"/>
+            <Entry Placeholder="Enter Item Name" 
+               x:Name="txtItemName"
+                   Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Item Description" FontSize="Large"
+                   Grid.Row="2"/>
+            <Entry Placeholder="Enter Item Description" 
+               x:Name="txtItemDescription"
+                   Grid.Row="2" Grid.Column="1"/>
+
+        </Grid>
+        <Button Text="Save"
+               x:Name="btnSave" 
+               Clicked="btnSave_Clicked"/>
+        <ListView x:Name="lvItems">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding ItemDesc}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

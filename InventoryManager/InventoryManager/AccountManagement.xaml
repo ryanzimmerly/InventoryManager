@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventoryManager.AccountManagement">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Inventory Manager" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="Add Account" FontSize="Title" Padding="30,10,30,10"/>
+            <Entry Placeholder="Name"
+                       x:Name="Name"/>
+            <Entry Placeholder="Email Address"
+                       x:Name="Email"/>
+            <Entry Placeholder="Password"
+                       x:Name="Password"/>
+            <Entry Placeholder="Mobile Phone Number"
+                       x:Name="Phone"/>
+            <Button Text="Create Account" 
+                    x:Name="CreateAccount"
+                    Clicked="CreateAccount_Clicked"/>
+            <Button Text="Cancel" 
+                    x:Name="Cancel"
+                    Clicked="Cancel_Clicked"/>
+            <Button Text="Back" 
+                    x:Name="btnMainPage"
+                    Clicked="btnMainPage_Clicked"/>
+            <Label Text=""
+                   x:Name="lblOutput"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
